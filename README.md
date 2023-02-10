@@ -13,9 +13,27 @@ This work was made in the context of one of my courses and therefore the followi
 + Get the (normalized) histogram of a feature of a certain artist.
 + Get a visual comparison with 2 types of distance between two artists' features.
 
-## Method
+## Method & structure
 
 For this work, I implemented a complete project structure, where the main.py script is in charge of calling the auxiliar functions. The helpers.py script does all the auxiliar work, and the plotters.py file executes the graphing functions.
+
+The project is structured as follows:
++ songs
+  + main
+    + __init__.py
+    + helpers.py
+    + plotters.py
+    + PEC4.py
+    + data
+      + data.zip
+    + plots
+  + tests
+    + __init__.py
+    + tests.py
+  + LICENSE
+  + setup.py
+  + requirements.txt
+  + README.md
 
 ## Results
 
