@@ -37,3 +37,11 @@ The project is structured as follows:
 
 ## Results
 
+The results are mainly expressed with plots, as it can be seen in the following two examples.
+
+![audio_feature_histogram](https://user-images.githubusercontent.com/81832365/218278525-3cd2eb7c-7a34-4f58-86df-a169312e3b3b.png)
+
+![cosinus_heatmap](https://user-images.githubusercontent.com/81832365/218278526-a5fa12b4-a6b8-4ffc-9b87-d56cd8620475.png)
+
+
+
