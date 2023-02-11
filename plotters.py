@@ -2,7 +2,7 @@ from helpers import *
 
 
 p = Path(__file__).parents[1]
-file_path_1 = os.path.join(p, 'PEC4/plots')
+file_path_1 = os.path.join(p, 'songs/plots')
 
 
 def bar_plotter(file_path, col_name):
