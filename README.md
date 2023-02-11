@@ -1,6 +1,6 @@
 # Musical analysis
 
-In this work, I used some datasets provided by my teachers at my master's degree and try to analyze them using Python's packaging tools, in order to create a complete Python project structure.
+In this work, I used some datasets provided by my teachers at my master's degree and try to analyze them using Python's packaging tools, in order to create a complete Python project structure. A test structure is also developped.
 
 ## Tasks
 
@@ -34,6 +34,10 @@ The project is structured as follows:
   + setup.py
   + requirements.txt
   + README.md
+
+## Tests 
+
+The code is tested to see if it works as intended. 5 classes are created to see if the formatting, reading, calculations, and operations are correctly implemented. The package has been released once every test has been verified.
 
 ## Results
 
