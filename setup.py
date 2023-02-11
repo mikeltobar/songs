@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(
-    name="PEC4",
+    name="songs",
     version="0.1.0",
     url="https://github.com/",
     author="Mikel Tobar del Barrio",
