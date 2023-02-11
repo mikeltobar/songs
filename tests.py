@@ -3,24 +3,24 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import unittest
 from pathlib import Path
-from PEC4.helpers import *
+from songs.helpers import *
 
 class TestFilesAndProcessing(unittest.TestCase):
 
 
     def test_unzipper(self):
         p = Path(__file__).parents[1]
-        file_path_1 = os.path.join(p, 'PEC4/data/albums_norm.csv')
-        file_path_2 = os.path.join(p, 'PEC4/data/artists_norm.csv')
-        file_path_3 = os.path.join(p, 'PEC4/data/tracks_norm.csv')
+        file_path_1 = os.path.join(p, 'songs/data/albums_norm.csv')
+        file_path_2 = os.path.join(p, 'songs/data/artists_norm.csv')
+        file_path_3 = os.path.join(p, 'songs/data/tracks_norm.csv')
         try:
             os.remove(file_path_1)
             os.remove(file_path_2)
             os.remove(file_path_3)
         except FileNotFoundError:
             pass
-        file_path_4 = os.path.join(p, 'PEC4/data/data.zip')
-        file_path_5 = os.path.join(p, 'PEC4/data')
+        file_path_4 = os.path.join(p, 'songs/data/data.zip')
+        file_path_5 = os.path.join(p, 'songs/data')
         unzipper(file_path_4, file_path_5)
         print(file_path_1)
         self.assertTrue(os.path.isfile(file_path_1))
@@ -29,7 +29,7 @@ class TestFilesAndProcessing(unittest.TestCase):
 
     def test_reader(self):
         p = Path(__file__).parents[1]
-        file_path_1 = os.path.join(p, 'PEC4/data/albums_norm.csv')
+        file_path_1 = os.path.join(p, 'songs/data/albums_norm.csv')
         self.assertTrue(reader(file_path_1, ';').equals(pd.read_csv(file_path_1, on_bad_lines='skip', sep=";")))
 
 
@@ -53,9 +53,9 @@ class TestReturnColumn(unittest.TestCase):
 
     def test_pandas_reading(self):
         p = Path(__file__).parents[1]
-        file_path_1 = os.path.join(p, 'PEC4/data/albums_norm.csv')
-        file_path_2 = os.path.join(p, 'PEC4/data/artists_norm.csv')
-        file_path_3 = os.path.join(p, 'PEC4/data/tracks_norm.csv')
+        file_path_1 = os.path.join(p, 'songs/data/albums_norm.csv')
+        file_path_2 = os.path.join(p, 'songs/data/artists_norm.csv')
+        file_path_3 = os.path.join(p, 'songs/data/tracks_norm.csv')
         df1 = pd.read_csv(file_path_1, sep=";")
         df2 = pd.read_csv(file_path_2, sep=";")
         df3 = pd.read_csv(file_path_3, sep=";")
@@ -68,9 +68,9 @@ class TestReturnColumn(unittest.TestCase):
 
     def test_csv_reading(self):
         p = Path(__file__).parents[1]
-        file_path_1 = os.path.join(p, 'PEC4/data/albums_norm.csv')
-        file_path_2 = os.path.join(p, 'PEC4/data/artists_norm.csv')
-        file_path_3 = os.path.join(p, 'PEC4/data/tracks_norm.csv')
+        file_path_1 = os.path.join(p, 'songs/data/albums_norm.csv')
+        file_path_2 = os.path.join(p, 'songs/data/artists_norm.csv')
+        file_path_3 = os.path.join(p, 'songs/data/tracks_norm.csv')
         df1 = pd.read_csv(file_path_1, sep=";")
         df2 = pd.read_csv(file_path_2, sep=";")
         df3 = pd.read_csv(file_path_3, sep=";")
@@ -86,9 +86,9 @@ class TestReturnColumn(unittest.TestCase):
 
     def test_compare_pandas_csv(self):
         p = Path(__file__).parents[1]
-        file_path_1 = os.path.join(p, 'PEC4/data/albums_norm.csv')
-        file_path_2 = os.path.join(p, 'PEC4/data/artists_norm.csv')
-        file_path_3 = os.path.join(p, 'PEC4/data/tracks_norm.csv')
+        file_path_1 = os.path.join(p, 'songs/data/albums_norm.csv')
+        file_path_2 = os.path.join(p, 'songs/data/artists_norm.csv')
+        file_path_3 = os.path.join(p, 'songs/data/tracks_norm.csv')
         col1 = get_column_pandas(file_path_1, "album_id")
         col2 = get_column_pandas(file_path_2, "artist_id")
         col3 = get_column_pandas(file_path_3, "track_id")
@@ -182,4 +182,4 @@ class TestFeatures(unittest.TestCase):
         self.assertEqual(out_1, out_3)
         self.assertEqual(out_2, out_4)
 
-# coverage run --source PEC4.helpers -m unittest discover && coverage report (from PEC4 folder)
+# coverage run --source songs.helpers -m unittest discover && coverage report (from songs folder)
