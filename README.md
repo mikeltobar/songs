@@ -43,5 +43,14 @@ The results are mainly expressed with plots, as it can be seen in the following 
 
 ![cosinus_heatmap](https://user-images.githubusercontent.com/81832365/218278526-a5fa12b4-a6b8-4ffc-9b87-d56cd8620475.png)
 
+## Bibliography
 
+In order to create the project, the following websites have been consulted:
+
++ https://kiwidamien.github.io/making-a-python-package.html
++ https://matplotlib.org/stable/index.html
++ https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html
++ https://stackoverflow.com/
++ https://numpy.org/doc/stable/index.html
++ https://pandas.pydata.org/
 
