@@ -35,6 +35,8 @@ The project is structured as follows:
   + requirements.txt
   + README.md
 
+The files have not been uploaded to Github following this structure to avoid redundancies.
+
 ## Tests 
 
 The code is tested to see if it works as intended. 5 classes are created to see if the formatting, reading, calculations, and operations are correctly implemented. The package has been released once every test has been verified.
