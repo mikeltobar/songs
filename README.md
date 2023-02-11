@@ -19,11 +19,11 @@ For this work, I implemented a complete project structure, where the main.py scr
 
 The project is structured as follows:
 + songs
-  + main
+  + songs
     + __init__.py
     + helpers.py
     + plotters.py
-    + PEC4.py
+    + main.py
     + data
       + data.zip
     + plots
